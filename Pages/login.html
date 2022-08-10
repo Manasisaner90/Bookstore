@@ -12,67 +12,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/login.js"></script>
+    <script src="../js/registration.js"></script> -->
 </head>
 
 <body>
     <div class="container">
-        
-            <div class="col-lg-12 d-flex  ">
-                <div class="card ">
-                    <div class=" d-flex justify-content-center">
-                        <div onclick="myFunction()">
-                            <h5>login</h5>
-                        </div>
-                        <div onclick="mydiv()">
-                            <h5>Sign UP</h5>
-                        </div>
-                    </div>
 
-                    <div id="div1" class="flex-wrap mt-3 login">
-                        <form action="#"> 
+        <div class="col-lg-12 d-flex  ">
+            <div class="card ">
+                <div class=" d-flex justify-content-center">
+                    <div>
+                        <h5  onclick="myFunction()">login</h5>
+                    </div>
+                    <div >
+                        <h5 onclick="mydiv()">Sign UP</h5>
+                    </div>
+                </div>
+
+                <div id="div1" class="flex-wrap mt-3 login">
+                    <form action="#">
                         <div class="form-group">
-                        <input type="text" id="userName" class="form-control " placeholder="Email">  
-                        </div> 
-                        <!-- <label class="label mb-0 mt-2"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required> -->
+                            <input type="text" id="userName" class="form-control " placeholder="Email">
+                        </div>
                         <div class="form-group">
-                        <input type="text" id="password" class="form-control " placeholder=" Passward">  
+                            <input type="text" id="password" class="form-control " placeholder=" Passward">
                         </div>
                         <p class="Ftext mt-1">Forgot Password?</p>
-                        <button class="btn" type="submit">Login</button>
+                        <button  onclick="login()"  value="submit" class="btn" type="submit">Login</button>
                         <p class="mt-2 text2">OR</p>
                         <button class="Fbtn">Facebook</button>
                         <button class="Gbtn">Google</button>
-                        </form>
-                    </div>
-                    <div id="div2" class="flex-wrap signup mt-2 ">
-                        <form action="#">
+                    </form>
+                </div>
+                <div id="div2" class="flex-wrap signup mt-2 ">
+                    <!-- <form action="#"> -->
                         <div class="form-group">
-                            <input type="text" id="fullName" name="fullName"
-                                class="form-control " placeholder="fullName"
-                                autocomplete="off">
+                            <input type="text" id="fullName" name="fullName" class="form-control "
+                                placeholder="fullName" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="email" name="email" class="form-control "
-                                placeholder="email" autocomplete="off">
+                            <input type="text" id="email" name="email" class="form-control " placeholder="email"
+                                autocomplete="off">
                         </div>
                         <div class="form-group">
                             <input type="text" id="password" name="password" class="form-control "
                                 placeholder="password" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="phone" name="phone" class="form-control "
-                                placeholder="phone" autocomplete="off">
+                            <input type="text" id="phone" name="phone" class="form-control " placeholder="phone"
+                                autocomplete="off">
                         </div>
-                        <button value="submit" class="btn mt-2"type = "submit">Login</button>   
-                        </form>
+                        <button  onclick="register()"  class="btn mt-2">Sign Up</button>
+                    <!-- </form> -->
                 </div>
             </div>
             <div class="card2">
                 <img src="../assets/2766594@2x.png">
                 <h6>Online Book Shopping</h6>
-            </div>       
-    </div>
+            </div>
+        </div>
 </body>
 
 </html>
