@@ -6,12 +6,6 @@
     max-width: 100%;
 }
 
-/* .nav {
-    height: 60px;
-    margin-top: 0px;
-    background-color: brown;
-} */
-
 .rounded {
     margin-top: 10px;
     margin-left: 10px;
@@ -108,51 +102,6 @@
 
 }
 
-.BOOKSTORE{
-    margin-left: 0.8%;
-    width: 6%;
-    height: 33%;
-    text-align: left;
-    font: normal normal normal 20px/26px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    text-transform: capitalize;
-    opacity: 1;
-}
-
-.searchBar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 3%;
-    width: 33%;
-    height: 55%;
-    background: #FCFCFC 0% 0% no-repeat padding-box;
-    border-radius: 3px;
-    opacity: 1;
-    /* border:2px solid black; */
-}
-
-#srhIcon{
-    padding-top: 5px;
-    /* background: #9D9D9D 0% 0% no-repeat padding-box; */
-    opacity: 1;
-}
-.searchInput{
-    /* border: 1px solid blue; */
-    height:100%;
-    width:96%;
-}
-.searchInput1{
-    width:98.5%;
-    height:80%;
-    border:1px solid transparent;
-    font: normal normal normal 12px/16px Roboto;
-    letter-spacing: 0px;
-    color: #9D9D9D;
-    opacity: 1;
-}
-
 .user{
     display: flex;
     flex-direction: column;
@@ -175,6 +124,7 @@
     display: flex;
     justify-content:center;
     align-items: flex-end;
+    margin-top: 10px;
 }
 
 .userName{
@@ -232,6 +182,7 @@
     color:white;
     /* background: #FFFFFF 0% 0% no-repeat padding-box; */
     opacity: 1;
+    margin-top: 10px;
 }
 
 
@@ -275,7 +226,7 @@
     border-radius: 2px;
     opacity: 1;
 }
-.flex-container21{
+.flex-containernew{
     display:flex;
     flex-direction: column;
     height:400px;
@@ -334,6 +285,7 @@
     width:170px;
     color:#F5F5F5;
     background-color: #7C1E1E;
+    border: none;
     
 }
 
@@ -702,269 +654,3 @@
     opacity: 1;
 }
 
-/* MEDIA QUERY FOR IPHONE5 */
-
-@media only screen and (min-width: 250px) and (max-width: 340px) {
-    .main-container{
-        width:100%;
-        /* margin-left: 0%; */
-    }
-    .bookIcon{
-        /*     border:1px solid green; */
-            height:25px;
-            width:30px;
-            margin-left:1%;
-        }
-        
-        .BOOKSTORE{
-            height:25px;
-            width:100px;
-            margin-left:0%;
-        }
-        
-        .searchInput{
-            display:none;
-        }
-        .searchInput1{
-            display:none;
-        }
-        .searchBar{
-            display:flex;
-            font-size:10px;
-            width:80px;
-            margin-left:1%;
-        }
-        .cart{
-            margin-left:auto;
-        }
-        
-        .user{
-            margin-left:auto;
-        }
-
-        .userOptions{
-            /* display: flex; */
-            /* flex-direction: column; */
-            height:80px;
-            width:70px;
-            position:absolute;
-            z-index: 1;
-            /* margin-left:65%; */
-            margin-top:15%;
-            border:1px solid grey;
-           
-        }
-
-
-        .flex-container11{
-            flex-direction:column;
-            margin-top:100%;
-            margin-left:0%;
-            /* width:304px; */
-        /*     position:relative; */
-        }
-
-        .flex-container21{
-            width:304px;
-            margin-left:0%;
-            /* border:1px solid red */
-        }
-        .flex-container111{
-            margin-left:0%;
-            width: 304px;
-        }
-        
-        
-        .feedbackContainer{
-            position:relative;
-            /* top:0%; */
-            width:304px;
-            margin-left:0%;
-            /* border:1px solid green; */
-        }
-        
-        .header{
-            width:100%;
-            height:45px;
-            margin-left:-1.5%;
-        }
-
-        .sButton{
-            margin-left:73%;
-        }
-
-        .strContent{
-            width:304px;
-            /* margin-top: 10px; */
-        }
-        .shweta{
-            margin-top:12px;
-        }
-        
-
-}
-
-
-  
-/* MEDIA QUER FOR IPHONE 6 */
-
-@media only screen and (min-width: 350px) and (max-width: 400px) {
-    .bookIcon{
-        /*     border:1px solid green; */
-            height:25px;
-            width:30px;
-            margin-left:1%;
-        }
-        
-        .BOOKSTORE{
-            height:25px;
-            width:100px;
-            /* margin-left:5%; */
-        }
-        
-        .searchInput{
-            display:none;
-        }
-        .searchInput1{
-            display:none;
-        }
-        .searchBar{
-            display:flex;
-            font-size:10px;
-            width:80px;
-            margin-left:1%;
-        }
-        .cart{
-            margin-left:auto;
-        }
-        
-        .user{
-            margin-left:auto;
-        }
-
-        .userOptions{
-            /* display: flex; */
-            /* flex-direction: column; */
-            height:90px;
-            width:80px;
-            position:absolute;
-            z-index: 1;
-            /* margin-left:65%; */
-            margin-top:15%;
-            border:1px solid grey;
-           
-        }
-
-        .flex-container11{
-            flex-direction:column;
-            margin-top:60%;
-            margin-left:0%;
-        /*     position:relative; */
-        }
-
-        .flex-container21{
-            width:361px;
-            margin-left:0%;
-            /* border:1px solid red */
-        }
-        .flex-container111{
-            margin-left:0%;
-        }
-        
-        
-        .feedbackContainer{
-            position:relative;
-            /* top:0%; */
-            width:361px;
-            margin-left:0%;
-            /* border:1px solid green; */
-        }
-        
-        .header{
-            width:100%;
-        }
-
-        .sButton{
-            margin-left:77%;
-        }
-
-        .strContent{
-            width:361px;
-        }
-
-        .shweta{
-            margin-top:12px;
-        }
-        
-        
-        
-
-}
-
-
-/* MEDIA QUERY FOR IPAD */
-@media only screen and (min-width: 768px) and (max-width: 800px) {
-    .main-container{
-        width:100%;
-    }
-
-    .bookIcon{
-        /*     border:1px solid green; */
-            height:25px;
-            width:30px;
-/*             margin-left:%; */
-        }
-        
-        .BOOKSTORE{
-            height:25px;
-            width:100px;
-            /* margin-left:%; */
-        }
-        
-        .searchInput{
-/*             display:none; */
-        }
-        .searchInput1{
-/*             display:none; */
-        }
-        .searchBar{
-            display:flex;
-            font-size:10px;
-            width:280px;
-/*             margin-left:10%; */
-        }
-        .cart{
-/*             margin-left:50px; */
-        }
-        
-        .user{
-            margin-left:10%;
-        }
-
-        .flex-container1{
-/*             justify-content:center; */
-            margin-top:10%;
-            /* border-top:1px solid blue; */
-        }
-
-        .header{
-
-            /* margin-left:-1%; */
-        }
-
-
-    .feedbackContainer{
-        width:45%;
-        margin-top: 60%;
-        margin-left: 67%;
-    }
-
-    .sButton{
-        margin-left:75%;
-    }
-    .strContent{
-        /* border:1px solid red; */
-        width: 100%;
-        height: 65px;
-    }
-}
