@@ -6,6 +6,14 @@
     max-width: 100%;
 }
 
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 550px;
+    margin-left: 26.5%;
+    position: absolute;
+}
 .rounded {
     margin-top: 10px;
     margin-left: 10px;
@@ -495,11 +503,11 @@
 .feedbackContainer{
     display: flex;
     flex-direction: column;
-    height:600px;
-    width:550px;
-    margin-left: 5.5%;
-    margin-top: 22%;
-    /* border:1px solid grey; */
+    height: 600px;
+    width: 550px;
+    margin-left: 26.5%;
+    margin-top: 30%;
+    /* border: 1px solid grey; */
     position: absolute;
 }
 
