@@ -1,4 +1,8 @@
 
+window.addEventListener('DOMContentLoaded', function() {
+const cart = document.querySelector('.cart')
+
+
 var result;
 let token = localStorage.getItem('token');
 getbooks();
@@ -37,6 +41,10 @@ function getbooks() {
     }
   });
 
+  cart.addEventListener('click', function() {
+    window.location = "http://localhost:5500/pages/cart.html"
+  })
+  
   // $(document).on('click', '.box', function (event) {
   //   console.log(event.target.id)
   //   console.log(event.target.textContent)
@@ -110,14 +118,17 @@ function getbooks() {
 <p class="mb-4"><b>Rs.${book.discountPrice} </b> Rs.${book.price}</p> */}
 
 
+
+
+})
 function myFunction() {
   
-document.getElementById('demo').addEventListener('click',(f)=>{
-console.log(f.target.id)
-localStorage.setItem('bookid', f.target.id)
-window.open("displaybook.html");
-  })
-   
-
+  document.getElementById('demo').addEventListener('click',(f)=>{
+  console.log(f.target.id)
+  localStorage.setItem('bookid', f.target.id)
+  window.open("displaybook.html");
+    })
+     
   
-}
+    
+  }

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/dislaybook.css">
-  <script src="../js/displaybook.js"></script>
+  
 </head>
 
 <body>
@@ -60,14 +60,17 @@
                 <button class="bagButton" id="bagButton">ADD TO BAG</button>
                 <div class="productCounter" id="productCounter">
                     <button class="counter-minus" id ="counter-minus">-</button>
-                    <div class="counter-display" id ="counter-display"></div>
-
+                    <!-- <div class="counter-display" id ="counter-display">1</div> -->
+                    <input type="text" id="quantity" value="0">
                     <button class="counter-plus" id="counter-plus">+</button>
+                    <!-- <button class="counter-minus" onclick="decreaseNumber('counter-display')">-</button>
+                    <div class="counter-display" id ="counter-display">1</div>
+                    <button class="counter-plus" onclick="increaseNumber('counter-display')">+</button> -->
                 </div>
+                
                 <button class="wishButton" id="wishButton">WISHLIST</button>
                 <button class ="alWish" id="alWish"> ADDED TO WISHLIST</button>
                 <button class ="alWish1" id="alWish1">ALREADY IN WISHLIST</button>
-
             </div>
         </div>
         <div class="flex-containernew">
@@ -145,5 +148,5 @@
 
   </div>
 </body>
-
+<script src="../js/displaybook.js"></script>
 </html>
