@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
 var result;
 let token = localStorage.getItem('token');
+console.log(token)
 let id = localStorage.getItem('bookid');
 console.log(id)
 getbooks();
@@ -10,8 +11,8 @@ function getbooks() {
     url: 'https://bookstore.incubation.bridgelabz.com/bookstore_user/get/book',
     type: 'GET',
     headers:{
-      'x-access-token': this.token,
       'Content-type': 'application/json',
+      'x-access-token':token,
     },
     success: function (result) {
       console.log(result.result);
@@ -69,41 +70,41 @@ $(document).on('click', '#bagButton', function (e){
         'Content-type': 'application/json',
       },
       success: function (result) {
-    //     let Res = JSON.parse(result);
-    //     // console.log(Res.result);
-    //     let bookNum3 = Res.result
-    //     console.log(bookNum3);
-    //     // console.log(bookNum3.quantityToBuy)
+        let data = JSON.parse(result);
+        // console.log(data.result);
+        let bookNum3 = data.result
+        console.log(bookNum3);
+        // console.log(bookNum3.quantityToBuy)
 
-    //     filterArry3 = bookNum3.filter(function(book) {
-    //         // console.log(book)
-    //         return book.product_id._id == params.id;
-    //         // quant = filterArry3.quantityToBuy
+        filterArry3 = bookNum3.filter(function(book) {
+            // console.log(book)
+            return book.product_id._id == params.id;
+            // quant = filterArry3.quantityToBuy
 
-    //     })
-    //     console.log(filterArry3)
+        })
+        console.log(filterArry3)
 
-    //     quant = filterArry3.map(function(book) {
-    //         if (book.quantityToBuy > 0) {
-    //             bagButton.style.display = 'none';
-    //             productCounter.style.display = 'flex';
+        quant = filterArry3.map(function(book) {
+            if (book.quantityToBuy > 0) {
+                bagButton.style.display = 'none';
+                productCounter.style.display = 'flex';
 
-    //         }
-    //         console.log(book.quantityToBuy)
-    //         return book.quantityToBuy
+            }
+            console.log(book.quantityToBuy)
+            return book.quantityToBuy
 
 
 
-    //     })
+        })
 
-    //     counterDisplay.innerHTML = quant[0]
-    //     console.log(quant)
+        counterDisplay.innerHTML = quant[0]
+        console.log(quant)
 
     
-    // .catch(function(error) {
-    //     console.log(error)
-    //         // An error occurred
-    // });
+    .catch(function(error) {
+        console.log(error)
+            // An error occurred
+    });
 
        }
       })

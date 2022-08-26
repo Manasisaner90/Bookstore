@@ -6,12 +6,15 @@ const cart = document.querySelector('.cart')
 var result;
 let token = localStorage.getItem('token');
 getbooks();
+myFunction()
 function getbooks() {
   $.ajax({
     url: 'https://bookstore.incubation.bridgelabz.com/bookstore_user/get/book',
     type: 'GET',
-    'Content-type': 'application/json',
-    // 'x-access-token': this.token,
+    headers:{
+      'x-access-token': token,
+      'Content-type': 'application/json',
+    },
     success: function (result) {
       console.log(result.result);
       bookarray = result.result;
@@ -42,7 +45,7 @@ function getbooks() {
   });
 
   cart.addEventListener('click', function() {
-    window.location = "http://localhost:5500/pages/cart.html"
+    window.location.href = '../Pages/cart.html';
   })
   
   // $(document).on('click', '.box', function (event) {
@@ -113,14 +116,6 @@ function getbooks() {
 // });
 // }
 }
-//<div class="book"id=${book.bookImage}><img src="/Assets/bookListing.png" class ="img"> </div>
-{/* <span class="text-center" style="width:3px; height:22px;background-color:green;border-radius:3px;">4.5</span>
-<p class="mb-4"><b>Rs.${book.discountPrice} </b> Rs.${book.price}</p> */}
-
-
-
-
-})
 function myFunction() {
   
   document.getElementById('demo').addEventListener('click',(f)=>{
@@ -132,3 +127,4 @@ function myFunction() {
   
     
   }
+})

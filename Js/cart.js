@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
   var result;
   let cartItem_id;
   let token = localStorage.getItem('token');
-  //  console.log(token)
+  console.log(token)
   let id = localStorage.getItem('bookid');
   console.log(id)
 
@@ -38,27 +38,24 @@ window.addEventListener('DOMContentLoaded', function () {
       url: `https://bookstore.incubation.bridgelabz.com/bookstore_user/get_cart_items`,
       type: 'GET',
       headers: {
-        'Content-type': 'application/json',
         'x-access-token': token,
+        'Content-type': 'application/json',  
       },
       // 'x-access-token': this.token,
       success: function (result) {
-        console.log(result);
-        const bookNum3 = result.result;
+       // console.log(result.result);
+        let bookNum3 = result.result;
         console.log(bookNum3);
 
-
-        //  cartContainer.innerHTML = bookNum3.map(function(cartItem) {
+        //cartContainer.innerHTML = bookNum3.map(function(cartItem) {
         document.getElementById('cartdemo').innerHTML = bookNum3.map((cartItem) =>
-          `  <div class="bookHead" id="${cartItem._id}">
+          `<div class="bookHead" id="${cartItem._id}">
          <div class="bookContainer" id="${cartItem._id}">
              <img src="../assets/Image 11.png" width="100%" height="100%" id="${cartItem._id}">
          </div>
          <div class="detailContainer" id="${cartItem._id}">
-
              <div class="bookName1" id="bookName">${cartItem.product_id.bookName}</div>
              <div class="author1" id="author">${cartItem.product_id.author}</div>
-
              <div class="price1" id="${cartItem._id}">
                  <div class="price11" id="${cartItem._id}">Rs. ${cartItem.product_id.discountPrice}</div>
                  <div class="originalPrice1" id="${cartItem._id}"> ${cartItem.product_id.price}</div>
@@ -68,37 +65,37 @@ window.addEventListener('DOMContentLoaded', function () {
              
              <button class="counter-plus" id="${cartItem._id}">+</button>
              
-             <button class="removeItem" id="${cartItem._id}">Remove</button>  
+             <button class="remove_Item" id="${cartItem._id}">Remove</button>  
      </div>
          </div>
      </div>`
-          // } )
-        )
+         // } )
+       )
       }
     })
   }
 
-  $(document).on('click', '.removeItem', function (event) {
-    console.log(token)
-    // console.log(event.target.id)
+//  $(document).on('click', '.removeItem', function (event) {
+  //   console.log(token)
+  //   // console.log(event.target.id)
 
-    $.ajax({
-      url: `https://bookstore.incubation.bridgelabz.com/bookstore_user/remove_cart_item/${id}`,
-      type: 'DELETE',
-      // data: JSON.stringify(req),
-      headers: {
-        'Content-Type': 'application/json',
-        'x-access-token':token,
-      },
-      success: function (result) {
-        console.log(result);
+  //   $.ajax({
+  //     url: `https://bookstore.incubation.bridgelabz.com/bookstore_user/remove_cart_item/${id}`,
+  //     type: 'DELETE',
+  //     // data: JSON.stringify(req),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'x-access-token':token,
+  //     },
+  //     success: function (result) {
+  //       console.log(result);
   
-      },
-      error: function (error) {
-        console.log(error);
-      }
-    });
-  })
+  //     },
+  //     error: function (error) {
+  //       console.log(error);
+  //     }
+  //   });
+  // })
 
   //  function addtocart() {
   //     $.ajax({
